@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#_learning/Tutorial/testrun.csproj": {}
+    "/Users/gaffle/iCloud Drive (Archive)/Documents/Programming/personal/Practice/Personal_Projects/c#_learning/Tutorial/testrun.csproj": {}
   },
   "projects": {
-    "/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#_learning/Tutorial/testrun.csproj": {
+    "/Users/gaffle/iCloud Drive (Archive)/Documents/Programming/personal/Practice/Personal_Projects/c#_learning/Tutorial/testrun.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#_learning/Tutorial/testrun.csproj",
+        "projectUniqueName": "/Users/gaffle/iCloud Drive (Archive)/Documents/Programming/personal/Practice/Personal_Projects/c#_learning/Tutorial/testrun.csproj",
         "projectName": "testrun",
-        "projectPath": "/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#_learning/Tutorial/testrun.csproj",
+        "projectPath": "/Users/gaffle/iCloud Drive (Archive)/Documents/Programming/personal/Practice/Personal_Projects/c#_learning/Tutorial/testrun.csproj",
         "packagesPath": "/Users/gaffle/.nuget/packages/",
-        "outputPath": "/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#_learning/Tutorial/obj/",
+        "outputPath": "/Users/gaffle/iCloud Drive (Archive)/Documents/Programming/personal/Practice/Personal_Projects/c#_learning/Tutorial/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/gaffle/.nuget/NuGet/NuGet.Config"
