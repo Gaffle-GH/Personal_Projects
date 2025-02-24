@@ -3,5 +3,19 @@
 ---
 
 ## Information
-* Personal Projects that can be used for Free Use: (MIT Licence)
-  * This is practically my project dump repository.
+* Personal Projects:
+  * Under Licencing for Fair-Use: (MIT Licence)
+ 
+## Listing
+* **1.** (2-23) : `Bank Account`
+
+## Installation (Getting Started)
+* Studio Visual Code
+  * https://code.visualstudio.com/
+ 
+## Repository
+* Download (Under 'Code')
+
+
+
+
