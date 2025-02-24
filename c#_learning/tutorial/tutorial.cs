@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace testrun
 {
@@ -86,8 +86,6 @@ namespace testrun
             Console.WriteLine("Int to String: " + Convert.ToString(num3));
             Console.WriteLine("Int to Double: " + Convert.ToDouble(num3));
             
-
-
         }
     }
 }
