@@ -1,0 +1,14 @@
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/obj/Debug/net9.0/testrun.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/obj/Debug/net9.0/testrun.AssemblyInfoInputs.cache
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/obj/Debug/net9.0/testrun.AssemblyInfo.cs
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/obj/Debug/net9.0/testrun.csproj.CoreCompileInputs.cache
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/bin/Debug/net9.0/testrun
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/bin/Debug/net9.0/testrun.deps.json
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/bin/Debug/net9.0/testrun.runtimeconfig.json
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/bin/Debug/net9.0/testrun.dll
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/bin/Debug/net9.0/testrun.pdb
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/obj/Debug/net9.0/testrun.dll
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/obj/Debug/net9.0/refint/testrun.dll
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/obj/Debug/net9.0/testrun.pdb
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/obj/Debug/net9.0/testrun.genruntimeconfig.cache
+/Users/gaffle/Documents/Programming/personal/Practice/Personal_Projects/c#/testrun/obj/Debug/net9.0/ref/testrun.dll
