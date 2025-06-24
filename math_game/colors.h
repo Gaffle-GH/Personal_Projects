@@ -1,7 +1,8 @@
 #ifndef COLORS_H
 #define COLORS_H
 
-#include function
+#include <string>
+using namespace std;
 
 const int RESET      = 0;
 const int BOLD       = 1;

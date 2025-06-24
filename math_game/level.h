@@ -1,37 +1,7 @@
 #ifndef LEVEL_H
 #define LEVEL_H
-#include "functions.cc"
+#include "functions.h"
 #include "colors.h"
-
-
-void GAME::play10easy(){
-    cout << color(BOLD) << color(MAGENTA) << "Confirm" << color(WHITE) << " Game" << color(RESET) << endl << endl;
-
-    cout << color(MAGENTA) << "Questions" << color(WHITE) << ": " << color(WHITE) << num_questions << color(RESET) << endl;
-    cout << color(MAGENTA) << "Difficulty" << color(WHITE) << ": " << color(WHITE) << "Easy" << color(RESET) << endl << endl;
-
-    cout << color(MAGENTA) << "1" << color(WHITE) << ". Confirm" << endl;
-    cout << color(MAGENTA) << "2" << color(WHITE) << ". Exit" << endl;
-
-    cout << endl << color(WHITE) << "Select an option: " << color(RESET);
-    int option;
-
-    cin >> option;
-
-    if(option < 1 || option > 2){
-        GAME::clearscreen();
-        GAME::titledisplay();
-        GAME::play10easy();
-    }else if(option == 1){
-        GAME::clearscreen();
-        GAME::titledisplay();
-        GAME::gameMATCH(num_questions = 10, num_difficulty = 1);
-    }else if(option == 2){
-        GAME::clearscreen();
-        GAME::titledisplay();
-        GAME::option();
-    }
-}
 
 void GAME::gameMATCH(int num_quetions, int num_difficulty){
     bool first_question = true;
@@ -40,6 +10,8 @@ void GAME::gameMATCH(int num_quetions, int num_difficulty){
     }
 
     for(int i = 0; i < num_quetions; i++){
+        int count = i + 1;
+       
         // EASY
         if(num_difficulty == 1){
             srand(time(0));
@@ -70,7 +42,7 @@ void GAME::gameMATCH(int num_quetions, int num_difficulty){
                 GAME::titledisplay();
                 cout << color(BOLD) << color(GREEN) << "Previous Question is Correct!" << color(RESET) << endl << endl;       
                 first_question = false; 
-            }else{
+            }else if(answer != question_answer){
                 incorrect++;
                 // Worm Progression Function
                 GAME::clearscreen();
@@ -79,7 +51,66 @@ void GAME::gameMATCH(int num_quetions, int num_difficulty){
                 first_question = false;
             }
         } 
+
+        if(count == num_questions){
+            GAME::clearscreen();
+            GAME::titledisplay();
+            GAME::gameover(num_questions, num_difficulty, correct, incorrect);
+            return;
+        }
+    }
 } 
 
+void GAME::gameover(int num_questions, int num_difficulty, int correct, int incorrect){
+    GAME::clearscreen();        
+    GAME::titledisplay();
+    string difficulty;
+
+    int total_percent = (correct * 100) / num_questions;
+
+    if (num_difficulty == 1){
+        string difficulty = "Easy";
+    }else if(num_difficulty == 2){
+        string difficulty = "Medium";
+    }else if(num_difficulty == 3){
+        string difficulty = "Hard";
+    }
+    
+    cout << color(BOLD) << color(MAGENTA) << "Game Over!" << color(RESET) << endl << endl;
+    cout << color(MAGENTA) << "Questions" << color(WHITE) << ": " << color(WHITE) << num_questions << color(RESET) << endl;
+    cout << color(MAGENTA) << "Difficulty" << color(WHITE) << ": " << color(WHITE) << difficulty << color(RESET) << endl;
+    cout << color(MAGENTA) << "Correct / Incorrect" << color(WHITE) << ": " << correct << " : " << incorrect << color(WHITE) << color(RESET) << endl;
+    cout << color(MAGENTA) << "Percent" << color(WHITE) << ": " << color(WHITE) << total_percent << color(RESET) << endl;
+
+}
+
+void GAME::play10easy(){
+    cout << color(BOLD) << color(MAGENTA) << "Confirm" << color(WHITE) << " Game" << color(RESET) << endl << endl;
+
+    cout << color(MAGENTA) << "Questions" << color(WHITE) << ": " << color(WHITE) << num_questions << color(RESET) << endl;
+    cout << color(MAGENTA) << "Difficulty" << color(WHITE) << ": " << color(WHITE) << "Easy" << color(RESET) << endl << endl;
+
+    cout << color(MAGENTA) << "1" << color(WHITE) << ". Confirm" << endl;
+    cout << color(MAGENTA) << "2" << color(WHITE) << ". Exit" << endl;
+
+    cout << endl << color(WHITE) << "Select an option: " << color(RESET);
+    int option;
+
+    cin >> option;
+
+    if(option < 1 || option > 2){
+        GAME::clearscreen();
+        GAME::titledisplay();
+        GAME::play10easy();
+    }else if(option == 1){
+        GAME::clearscreen();
+        GAME::titledisplay();
+        GAME::gameMATCH(num_questions = 10, num_difficulty = 1);
+    }else if(option == 2){
+        GAME::clearscreen();
+        GAME::titledisplay();
+        GAME::option();
+    }
+}
 
 #endif

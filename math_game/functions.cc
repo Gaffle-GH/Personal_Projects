@@ -1,6 +1,3 @@
-#ifndef FUNCTIONS_CC
-#define FUNCTIONS_CC
-
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -13,14 +10,14 @@ using namespace std;
 
 class GAME{
     public:
-        GAME(string name, double score);
+        GAME(string name, int score);
         void clearscreen();
 
         //Displays
         void titledisplay();
         void option();
         void gameMATCH(int num_quetions, int num_difficulty);
-        void gameover(int correct, int incorrect);
+        void gameover(int num_questions, int num_difficulty, int correct, int incorrect);
 
         // Game Functions
         void instructions();
@@ -94,4 +91,3 @@ class GAME{
         int incorrect;
 };
 
-#endif

@@ -8,7 +8,7 @@
 
 using namespace std;
 
-GAME::GAME(string name, double score) : name(name), score(score){}
+GAME::GAME(string name, int score) : name(name), score(score){}
 
 void GAME::clearscreen(){
     cout << "\033[2J\033[1;1H";
