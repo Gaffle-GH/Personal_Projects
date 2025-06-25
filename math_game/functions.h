@@ -179,12 +179,12 @@ void GAME::play10(){
         cout << "Medium" << endl;
         GAME::clearscreen();
         GAME::titledisplay();
-        GAME::play10medium();
+        // GAME::play10medium();
     }else if(option == 3){
         cout << "Hard" << endl;
         GAME::clearscreen();
         GAME::titledisplay();
-        GAME::play10hard();
+        // GAME::play10hard();
     }else if(option == 4){
         GAME::clearscreen();
         GAME::titledisplay();
