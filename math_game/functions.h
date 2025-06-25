@@ -106,7 +106,8 @@ void GAME::startgame(){
     GAME::titledisplay();
     int option;
 
-    cout << color(BOLD) << color(MAGENTA) << "Select " << color(WHITE) << "Question Count: " << color(RESET) << endl << endl;
+    // Make this so its not that full on the screen
+    cout << color(BOLD) << color(MAGENTA) << "Select " << color(WHITE) << "Question Count : " << color(RESET) << endl << endl;
     cout << color(MAGENTA) << "1" << color(WHITE) << ".  10 Questions" << endl;
     cout << color(MAGENTA) << "2" << color(WHITE) << ".  20 Questions" << endl;
     cout << color(MAGENTA) << "3" << color(WHITE) << ".  30 Questions" << endl; 
@@ -132,7 +133,7 @@ void GAME::startgame(){
     }else if(option == 1){
         GAME::play10();
     }else if(option == 2){
-        // GAME::play20();
+        GAME::play20();
     }else if(option == 3){
         // GAME::play30();
     }else if(option == 4){
@@ -179,12 +180,12 @@ void GAME::play10(){
         cout << "Medium" << endl;
         GAME::clearscreen();
         GAME::titledisplay();
-        // GAME::play10medium();
+        GAME::play10medium();
     }else if(option == 3){
         cout << "Hard" << endl;
         GAME::clearscreen();
         GAME::titledisplay();
-        // GAME::play10hard();
+        GAME::play10hard();
     }else if(option == 4){
         GAME::clearscreen();
         GAME::titledisplay();
@@ -192,7 +193,48 @@ void GAME::play10(){
     }
 }
 
-// Game Over (Reset )
+void GAME::play20(){
+    int option;
+    GAME::clearscreen();
+    GAME::titledisplay();
+    cout << color(BOLD) << color(MAGENTA) << "20" << color(WHITE) << " Questions" << color(RESET) << endl << endl;
+    cout << "Select Difficulty Level: " << endl;
+    cout << color(MAGENTA) << "1" << color(WHITE) << ". Easy" << endl;
+    cout << color(MAGENTA) << "2" << color(WHITE) << ". Medium" << endl;
+    cout << color(MAGENTA) << "3" << color(WHITE) << ". Hard" << endl;
+    cout << color(MAGENTA) << "4" << color(WHITE) << ". Back" << endl << endl;
+
+    cout << color(WHITE) << "Select an option: " << color(RESET);
+
+    cin >> option;
+
+    if(option < 1 || option > 4){
+        GAME::clearscreen();
+        GAME::titledisplay();
+        GAME::play20();
+    }else if(option == 1){
+        cout << "Easy" << endl;
+        GAME::clearscreen();
+        GAME::titledisplay();
+        GAME::play20easy();
+    }else if(option == 2){
+        cout << "Medium" << endl;
+        GAME::clearscreen();
+        GAME::titledisplay();
+        GAME::play20medium();
+    }else if(option == 3){
+        cout << "Hard" << endl;
+        GAME::clearscreen();
+        GAME::titledisplay();
+        GAME::play20hard();
+    }else if(option == 4){
+        GAME::clearscreen();
+        GAME::titledisplay();
+        GAME::startgame();
+    }
+}
+
+// Game Over (Reset)
 void GAME::reset(int correct = 0, int incorrect = 0){
     GAME::clearscreen();
     GAME::titledisplay();

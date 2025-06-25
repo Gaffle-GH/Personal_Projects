@@ -37,10 +37,12 @@ class GAME{
         void play90();
 
         // Difficulty Functions
-        void play10easy();
-        void play10medium();
-        void play10hard();
+        //DONE
+        void play10easy(); 
+        void play10medium(); 
+        void play10hard(); 
         
+        //DONE
         void play20easy();
         void play20medium();
         void play20hard();
