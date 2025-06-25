@@ -2,6 +2,10 @@
 #define LEVEL_H
 #include "functions.h"
 #include "colors.h"
+#include <cmath>
+#include <iostream>
+#include <iomanip>
+
 
 //Levels
 #include "modes.h"
@@ -10,8 +14,8 @@
 void GAME::gameMATCH(int num_quetions, int num_difficulty){
     correct = 0;
     incorrect = 0;
-    double totalpoints = 0;
-    double pointsmultiplier = 1;
+    double points_mult = 1.0;
+    double points = 0.0;
 
     bool first_question = true;
     if(first_question == true){
@@ -38,6 +42,8 @@ void GAME::gameMATCH(int num_quetions, int num_difficulty){
                 sign = " - ";
             }
             
+            cout << color(MAGENTA) << "Points Multiplier: " << color(WHITE) << setprecision(2) << points_mult << "x" << color(RESET) << endl;
+            cout << color(MAGENTA) << "Points: " << color(WHITE) << setprecision(3) << points << color(RESET) << endl;
             cout << color(MAGENTA) << "Question " << color(WHITE) << i + 1 << ": " << color(RESET) << q1 << sign << q2 << " = ? " << endl << endl;
             cout << color(WHITE) << color(BOLD) << "Answer: " << color(RESET);
             cin >> answer;
@@ -45,13 +51,15 @@ void GAME::gameMATCH(int num_quetions, int num_difficulty){
 
             if(answer == question_answer){
                 correct++;
-                // Worm Progression Function
+                points += 1.0 * points_mult;  // Points
+                points_mult = points_mult * (0.1 + 1.1); // Point Increment
                 GAME::clearscreen();        
                 GAME::titledisplay();
                 cout << color(BOLD) << color(GREEN) << "Previous Question is Correct!" << color(RESET) << endl << endl;       
                 first_question = false; 
             }else if(answer != question_answer){
                 incorrect++;
+                points_mult = 1.0; // Reset Multiplier to 1.0
                 // Worm Progression Function
                 GAME::clearscreen();
                 GAME::titledisplay();
@@ -81,14 +89,16 @@ void GAME::gameMATCH(int num_quetions, int num_difficulty){
                 sign = " * ";
             }
 
+            cout << color(MAGENTA) << "Points Multiplier: " << color(WHITE) << setprecision(2) << points_mult << "x" << color(RESET) << endl;
+            cout << color(MAGENTA) << "Points: " << color(WHITE) << setprecision(3) << points << color(RESET) << endl;
             cout << color(MAGENTA) << "Question " << color(WHITE) << i + 1 << ": " << color(RESET) << q1 << sign << q2 << " = ? " << endl << endl;
             cout << color(WHITE) << color(BOLD) << "Answer: " << color(RESET);
             cin >> answer;
 
             if(question_answer == answer){
                 correct++;
-                totalpoints += 1;
-                pointsmultiplier += .01;
+                points += 1.0 * points_mult; 
+                points_mult = points_mult * (0.1 + 1.2); 
                 // Worm Progression Function
                 GAME::clearscreen();        
                 GAME::titledisplay();
@@ -96,7 +106,7 @@ void GAME::gameMATCH(int num_quetions, int num_difficulty){
                 first_question = false;
             }else if(question_answer != answer){
                 incorrect++;
-                pointsmultiplier = 0; // RESET POINTS MULTIPLIER
+                points_mult = 1.0;
                 // Worm Progression Function
                 GAME::clearscreen();
                 GAME::titledisplay();
@@ -130,13 +140,16 @@ void GAME::gameMATCH(int num_quetions, int num_difficulty){
                 question_answer = q1 / q2;
                 sign = " / ";
             }
-
+            cout << color(MAGENTA) << "Points Multiplier: " << color(WHITE) << setprecision(2) << points_mult << "x" << color(RESET) << endl;
+            cout << color(MAGENTA) << "Points: " << color(WHITE) << setprecision(3) << points << color(RESET) << endl;
             cout << color(MAGENTA) << "Question " << color(WHITE) << i + 1 << ": " << color(RESET) << q1 << sign << q2 << " = ? " << endl << endl;
             cout << color(WHITE) << color(BOLD) << "Answer: " << color(RESET);
             cin >> answer;
 
             if(question_answer == answer){
                 correct++;
+                points += 1.0 * points_mult; 
+                points_mult = points_mult * (0.1 + 1.3); 
                 // Worm Progression Function
                 GAME::clearscreen();        
                 GAME::titledisplay();
@@ -144,6 +157,7 @@ void GAME::gameMATCH(int num_quetions, int num_difficulty){
                 first_question = false; 
             }else if(question_answer != answer){
                 incorrect++;
+                points_mult = 1.0;
                 // Worm Progression Function
                 GAME::clearscreen();
                 GAME::titledisplay();
@@ -155,20 +169,22 @@ void GAME::gameMATCH(int num_quetions, int num_difficulty){
         if(count == num_questions){
             GAME::clearscreen();
             GAME::titledisplay();
-            GAME::gameover(num_questions, num_difficulty, correct, incorrect);
+            GAME::gameover(points, num_questions, num_difficulty, correct, incorrect);
             return;
         }
     }
 }
 
 
-void GAME::gameover(int num_questions, int num_difficulty, int correct, int incorrect){
+void GAME::gameover(double points, int num_questions, int num_difficulty, int correct, int incorrect){
     GAME::clearscreen();        
     GAME::titledisplay();
 
     int total_percent = (correct * 100) / num_questions;
-  
+    
+    
     cout << color(BOLD) << color(MAGENTA) << "Game Over!" << color(RESET) << endl << endl;
+    cout << color(MAGENTA) << "Points" << color(WHITE) << ": " << setprecision(3) << points << color(RESET) << endl;
     cout << color(MAGENTA) << "Questions" << color(WHITE) << ": " << color(WHITE) << num_questions << color(RESET) << endl;
       if (num_difficulty == 1){
         cout << color(MAGENTA) << "Difficulty" << color(WHITE) << ": " << color(WHITE) << "Easy" << color(RESET) << endl;
@@ -178,7 +194,7 @@ void GAME::gameover(int num_questions, int num_difficulty, int correct, int inco
         cout << color(MAGENTA) << "Difficulty" << color(WHITE) << ": " << color(WHITE) << "Hard" << color(RESET) << endl;
     }
     cout << color(MAGENTA) << "Correct / Incorrect" << color(WHITE) << ": " << correct << " / " << incorrect << color(WHITE) << color(RESET) << endl;
-    cout << color(MAGENTA) << "Percent" << color(WHITE) << ": " << color(WHITE) << total_percent << "%" << color(RESET) << endl;
+    cout << color(MAGENTA) << "Accuracy" << color(WHITE) << ": " << color(WHITE) << total_percent << "%" << color(RESET) << endl;
 
     cout << endl << color(MAGENTA) << "Play Again?" << color(RESET) << " [Y][N]" << endl;
     cout << color(WHITE) << "Option: " << color(RESET);
@@ -194,7 +210,5 @@ void GAME::gameover(int num_questions, int num_difficulty, int correct, int inco
         exit(0);
     }
 }
-
-
 
 #endif

@@ -116,8 +116,7 @@ void GAME::startgame(){
     cout << color(MAGENTA) << "6" << color(WHITE) << ".  60 Questions" << endl;
     cout << color(MAGENTA) << "7" << color(WHITE) << ".  70 Questions" << endl;
     cout << color(MAGENTA) << "8" << color(WHITE) << ".  80 Questions" << endl;
-    cout << color(MAGENTA) << "9" << color(WHITE) << ".  90 Questions" << endl;
-    cout << endl;
+    cout << color(MAGENTA) << "9" << color(WHITE) << ".  90 Questions" << endl << endl;
     cout << color(MAGENTA) << "0" << color(WHITE) << ".  Back to Main Menu" << endl << endl;
 
     cout << color(WHITE) << "Select an option: " << color(RESET);
@@ -160,8 +159,8 @@ void GAME::play10(){
     cout << "Select Difficulty Level: " << endl;
     cout << color(MAGENTA) << "1" << color(WHITE) << ". Easy" << endl;
     cout << color(MAGENTA) << "2" << color(WHITE) << ". Medium" << endl;
-    cout << color(MAGENTA) << "3" << color(WHITE) << ". Hard" << endl;
-    cout << color(MAGENTA) << "4" << color(WHITE) << ". Back" << endl << endl;
+    cout << color(MAGENTA) << "3" << color(WHITE) << ". Hard" << endl << endl;
+    cout << color(MAGENTA) << "4" << color(WHITE) << ". Return" << endl << endl;
 
     cout << color(WHITE) << "Select an option: " << color(RESET);
 
@@ -201,8 +200,8 @@ void GAME::play20(){
     cout << "Select Difficulty Level: " << endl;
     cout << color(MAGENTA) << "1" << color(WHITE) << ". Easy" << endl;
     cout << color(MAGENTA) << "2" << color(WHITE) << ". Medium" << endl;
-    cout << color(MAGENTA) << "3" << color(WHITE) << ". Hard" << endl;
-    cout << color(MAGENTA) << "4" << color(WHITE) << ". Back" << endl << endl;
+    cout << color(MAGENTA) << "3" << color(WHITE) << ". Hard" << endl << endl;
+    cout << color(MAGENTA) << "4" << color(WHITE) << ". Return" << endl << endl;
 
     cout << color(WHITE) << "Select an option: " << color(RESET);
 

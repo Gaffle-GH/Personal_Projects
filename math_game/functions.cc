@@ -17,7 +17,7 @@ class GAME{
         void titledisplay();
         void option();
         void gameMATCH(int num_quetions, int num_difficulty);
-        void gameover(int num_questions, int num_difficulty, int correct, int incorrect);
+        void gameover(double points, int num_questions, int num_difficulty, int correct, int incorrect);
 
         // Game Functions
         void instructions();
@@ -91,5 +91,8 @@ class GAME{
         // Test Questions
         int correct;
         int incorrect;
+
+        // Worm Progression
+        int forward = 1;
 };
 
