@@ -7,7 +7,7 @@
 #include <iomanip>
 
 
-//Levels
+// Levels
 #include "modes.h"
 
 // Add the Points System in Game Match
