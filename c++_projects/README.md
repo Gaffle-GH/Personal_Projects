@@ -1,4 +1,4 @@
-# C++ Projects Collection 🚀
+# C++ Projects Collection 
 
 This folder contains a selection of small C++ projects built for learning and practicing programming concepts. Each subfolder is a standalone project with its own functionality and code.
 
@@ -6,7 +6,7 @@ This folder contains a selection of small C++ projects built for learning and pr
 
 ## 📂 Projects
 
-### 🎲 Dice Rolling Simulator (`Dice_Rolling_Sim`)
+### Dice Rolling Simulator (`Dice_Rolling_Sim`)
 A simple program that simulates rolling dice.  
 - Generates random dice rolls.
 - Can simulate multiple rolls at once.
@@ -14,7 +14,7 @@ A simple program that simulates rolling dice.
 
 ---
 
-### 🥠 Fortune Cookie (`Fortune_Cookie`)
+### Fortune Cookie (`Fortune_Cookie`)
 A fun program that prints out random fortune cookie messages.  
 - Selects fortunes from a predefined list.
 - Demonstrates the use of **arrays** and **randomization**.
@@ -22,7 +22,7 @@ A fun program that prints out random fortune cookie messages.
 
 ---
 
-### 🔗 Single & Doubly Linked List (`Single_Doubly_List`)
+### Single & Doubly Linked List (`Single_Doubly_List`)
 An implementation of both **singly** and **doubly** linked lists.  
 - Supports basic operations like **insertion**, **deletion**, and **traversal**.
 - Helps understand **data structures** and **pointer manipulation**.
@@ -30,7 +30,7 @@ An implementation of both **singly** and **doubly** linked lists.
 
 ---
 
-### 💰 Bank Account Simulation (`bank_account`)
+### Bank Account Simulation (`bank_account`)
 A program that simulates a simple bank account system.  
 - Allows deposits, withdrawals, and balance checks.
 - Demonstrates **object-oriented programming (OOP)** principles using C++ classes.
