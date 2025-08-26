@@ -38,7 +38,7 @@ A program that simulates a simple bank account system.
 
 ---
 
-### ➗ Math Game (`math_game`)
+### Math Game (`math_game`)
 A small math-based quiz game.  
 - Generates random math questions.
 - Keeps score based on correct answers.
@@ -46,7 +46,7 @@ A small math-based quiz game.
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repository:
    ```bash
@@ -59,5 +59,3 @@ A small math-based quiz game.
 3. Open any project folder and follow its instructions to compile and run.
 
 ---
-
-Feel free to explore, modify, and learn from each project!
